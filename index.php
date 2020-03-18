@@ -2,6 +2,7 @@
  <head>
   <meta charset="utf-8">
   <title>Zadanie</title>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
  </head>
  <body>
   <div ng-app="myApp" ng-controller="customersCtrl">
@@ -38,15 +39,6 @@ else die( "Błąd w zapytaniu SQL! Sprawdź kod SQL w PhpMyAdmin." );
 ?>
   </table>
   <a href="dodaj.php">Dodawanie nowego</a>
-     <script>
-var app = angular.module('myApp', []);
-app.controller('customersCtrl', function($scope, $http) {
-                $http.get("json_select.php")
-                .success(
-                  function(data, status, headers, config){
-                        $scope.klasa=data;
-                });
-        });
-  </script>
+   <div class="g-recaptcha" data-sitekey="6Ld-KuIUAAAAAOiU1KuT9i7b1M7W_TzBTBluiEa1"></div>
  </body>
 </html>
